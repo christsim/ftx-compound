@@ -35,11 +35,11 @@ func main() {
 		os.Exit(1)
 	}
 
-	apiKey := argsWithoutProg[0]
-	apiSecret := argsWithoutProg[1]
-	subAccount := argsWithoutProg[2]
-	coin := strings.ToUpper(argsWithoutProg[3])
-	yearlyRate, err := strconv.ParseFloat(argsWithoutProg[4], 64)
+	apiKey := args[0]
+	apiSecret := args[1]
+	subAccount := args[2]
+	coin := strings.ToUpper(args[3])
+	yearlyRate, err := strconv.ParseFloat(args[4], 64)
 	if err != nil {
 		fmt.Println("Invalid yearly rate", err)
 		os.Exit(1)
